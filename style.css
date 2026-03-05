@@ -1,0 +1,18 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+}
+form{
+    border: 2px solid black;
+    height: 50vh;
+    width: 50vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    border: 2px solid black;
+    padding: 100px;
+}
