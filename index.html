@@ -3,44 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Zaid Islam — Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calc-wrapper">
-        <div class="calculator">
-            <div class="display">
-                <div class="expression" id="expression"></div>
-                <div class="result" id="result">0</div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo">ZI<span class="dot">.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#intro" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#project" class="nav-link">Project</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="intro">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Hello, I'm</p>
+            <h1 class="hero-name">Zaid<br><span class="outline-text">Islam</span></h1>
+            <div class="hero-tagline">
+                <span class="tag-role">Web Developer</span>
+                <span class="tag-sep">·</span>
+                <span class="tag-role">React Enthusiast</span>
+                <span class="tag-sep">·</span>
+                <span class="tag-role">AI Explorer</span>
             </div>
-            <div class="buttons">
-                <!-- Row 1 -->
-                <button class="btn btn-utility" data-action="clear">AC</button>
-                <button class="btn btn-utility" data-action="sign">+/−</button>
-                <button class="btn btn-utility" data-action="percent">%</button>
-                <button class="btn btn-operator" data-action="operator" data-value="÷">÷</button>
-                <!-- Row 2 -->
-                <button class="btn btn-number" data-action="number" data-value="7">7</button>
-                <button class="btn btn-number" data-action="number" data-value="8">8</button>
-                <button class="btn btn-number" data-action="number" data-value="9">9</button>
-                <button class="btn btn-operator" data-action="operator" data-value="×">×</button>
-                <!-- Row 3 -->
-                <button class="btn btn-number" data-action="number" data-value="4">4</button>
-                <button class="btn btn-number" data-action="number" data-value="5">5</button>
-                <button class="btn btn-number" data-action="number" data-value="6">6</button>
-                <button class="btn btn-operator" data-action="operator" data-value="−">−</button>
-                <!-- Row 4 -->
-                <button class="btn btn-number" data-action="number" data-value="1">1</button>
-                <button class="btn btn-number" data-action="number" data-value="2">2</button>
-                <button class="btn btn-number" data-action="number" data-value="3">3</button>
-                <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
-                <!-- Row 5 -->
-                <button class="btn btn-number btn-zero" data-action="number" data-value="0">0</button>
-                <button class="btn btn-number" data-action="decimal">.</button>
-                <button class="btn btn-equals" data-action="equals">=</button>
+            <p class="hero-desc">Building elegant digital experiences where design meets technology. Turning complex ideas into clean, functional interfaces.</p>
+            <div class="hero-cta">
+                <a href="#project" class="btn btn-primary">View My Work</a>
+                <a href="mailto:diazbutt123@gmail.com" class="btn btn-ghost">Get In Touch</a>
             </div>
         </div>
-    </div>
-    <script src="calculator.js"></script>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills-section" id="skills">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <h2 class="section-title">Skills &amp; <em>Expertise</em></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript — crafting pixel-perfect, responsive layouts with precision.</p>
+                    <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </div>
+                <div class="skill-card" data-delay="100">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.22 4.22l2.83 2.83m9.9 9.9 2.83 2.83M2 12h4m12 0h4M4.22 19.78l2.83-2.83m9.9-9.9 2.83-2.83"/></svg>
+                    </div>
+                    <h3>React &amp; Node</h3>
+                    <p>Component-driven development and server-side solutions with modern frameworks.</p>
+                    <div class="skill-tags"><span>React</span><span>Node.js</span><span>REST APIs</span></div>
+                </div>
+                <div class="skill-card" data-delay="200">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>AI &amp; ML</h3>
+                    <p>Exploring machine learning applications, particularly in computer vision and detection.</p>
+                    <div class="skill-tags"><span>Python</span><span>TensorFlow</span><span>CV</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Year Project -->
+    <section class="section project-section" id="project">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2 class="section-title">Featured <em>Project</em></h2>
+            </div>
+            <div class="project-showcase">
+                <div class="project-visual">
+                    <div class="project-mockup">
+                        <div class="mockup-screen">
+                            <div class="mockup-leaf">🌿</div>
+                            <div class="mockup-scan-line"></div>
+                            <div class="mockup-label">AI Analyzing...</div>
+                            <div class="mockup-result">Disease Detected: <span>Early Blight</span></div>
+                            <div class="mockup-confidence">Confidence: <strong>94.7%</strong></div>
+                        </div>
+                        <div class="mockup-glow"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-badge">Final Year Project</span>
+                    <h3 class="project-title">AI-Based Plant Disease Detection</h3>
+                    <p class="project-desc">A deep learning system that analyzes plant images in real-time to identify diseases early, helping farmers protect their crops and maximize yield. Built with computer vision and deployed as a web application.</p>
+                    <ul class="project-features">
+                        <li><span class="feat-icon">✦</span> Real-time disease classification</li>
+                        <li><span class="feat-icon">✦</span> High-accuracy deep learning model</li>
+                        <li><span class="feat-icon">✦</span> Web-based interface for accessibility</li>
+                        <li><span class="feat-icon">✦</span> Support for multiple plant species</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+        <div class="section-inner">
+            <div class="contact-card">
+                <div class="contact-bg-text">HELLO</div>
+                <span class="section-num light">03</span>
+                <h2 class="contact-title">Let's Work <em>Together</em></h2>
+                <p class="contact-sub">Have a project in mind or just want to chat? I'd love to hear from you.</p>
+                <div class="contact-links">
+                    <a href="mailto:diazbutt123@gmail.com" class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">diazbutt123@gmail.com</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="tel:03286050736" class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">03286050736</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">ZI<span class="dot">.</span></span>
+            <p class="footer-copy">© 2026 Zaid Islam. All rights reserved.</p>
+            <p class="footer-made">Made with passion 🖤</p>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+        let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                follower.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                follower.classList.remove('hover');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.skill-card, .project-showcase, .contact-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
