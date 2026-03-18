@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        ul{
-            display: flex;
-            list-style-type: none;
-        }
-        li{
-            margin-left: 10px;
-        }
-    </style>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="http://127.0.0.1:5500/index.html"><h1>My Portfolio</h1></a>
-        <nav>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Aboutus.html">Aboutus</a></li>
-                <li><a href="Signup.html">Signup</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-    <h1>Lets Get started</h1>
-    <h2>We are the Future</h2>
-    <h3>WE are the World</h3>
-    </section>
-    <footer>
-         <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+    <div class="calc-wrapper">
+        <div class="calculator">
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+            <div class="buttons">
+                <!-- Row 1 -->
+                <button class="btn btn-utility" data-action="clear">AC</button>
+                <button class="btn btn-utility" data-action="sign">+/−</button>
+                <button class="btn btn-utility" data-action="percent">%</button>
+                <button class="btn btn-operator" data-action="operator" data-value="÷">÷</button>
+                <!-- Row 2 -->
+                <button class="btn btn-number" data-action="number" data-value="7">7</button>
+                <button class="btn btn-number" data-action="number" data-value="8">8</button>
+                <button class="btn btn-number" data-action="number" data-value="9">9</button>
+                <button class="btn btn-operator" data-action="operator" data-value="×">×</button>
+                <!-- Row 3 -->
+                <button class="btn btn-number" data-action="number" data-value="4">4</button>
+                <button class="btn btn-number" data-action="number" data-value="5">5</button>
+                <button class="btn btn-number" data-action="number" data-value="6">6</button>
+                <button class="btn btn-operator" data-action="operator" data-value="−">−</button>
+                <!-- Row 4 -->
+                <button class="btn btn-number" data-action="number" data-value="1">1</button>
+                <button class="btn btn-number" data-action="number" data-value="2">2</button>
+                <button class="btn btn-number" data-action="number" data-value="3">3</button>
+                <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
+                <!-- Row 5 -->
+                <button class="btn btn-number btn-zero" data-action="number" data-value="0">0</button>
+                <button class="btn btn-number" data-action="decimal">.</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
 </body>
 </html>
